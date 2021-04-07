@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.6)
+project(armv7-linux-musl)
+include(${CMAKE_CURRENT_LIST_DIR}/../common/cp38.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../common/bootlin-armv7-musl.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../common/build.cmake)

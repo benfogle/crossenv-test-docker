@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.6)
+project(aarch64-linux-musl)
+include(${CMAKE_CURRENT_LIST_DIR}/../common/cp39.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../common/bootlin-aarch64-musl.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../common/build.cmake)

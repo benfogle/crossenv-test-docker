@@ -1,0 +1,13 @@
+FROM benfogle/crossenv-base
+ADD . /source
+RUN mkdir /build && \
+    cd /build && \
+    cmake /source/aarch64-musl-cp39 -DCMAKE_INSTALL_PREFIX=/opt && \
+    make && \
+    rm -rf /build
+ENV QEMU_LD_PREFIX=/opt/toolchain/aarch64-buildroot-linux-musl/sysroot
+ENV PYTHON_VERSION=3.9.4
+ENV BUILD_PYTHON=/opt/python/3.9.4/build/bin/python3
+ENV HOST_PYTHON=/opt/python/3.9.4/aarch64-buildroot-linux-musl/bin/python3
+ENV OBJ_BUILD_PYTHON=/opt/python/3.9.4/obj/build/python
+ENV OBJ_HOST_PYTHON=/opt/python/3.9.4/obj/aarch64-buildroot-linux-musl/python
