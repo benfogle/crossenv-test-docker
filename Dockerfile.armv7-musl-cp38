@@ -1,4 +1,4 @@
-FROM benfogle/crossenv-base
+FROM benfogle/crossenv-test-docker:base
 ADD . /source
 RUN mkdir /build && \
     cd /build && \
